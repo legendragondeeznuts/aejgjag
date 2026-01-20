@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Popup</title>
+</head>
+<body>
+  <input id="inputBox" type="text" placeholder="Type a word..." />
+
+  <script>
+    const replacements = {
+      dirty: "nigger",
+      fucking: "whore",
+      you: "slut"
+    };
+
+    document.getElementById("inputBox").addEventListener("input", function () {
+      const typed = this.value.toLowerCase();
+      if (replacements[typed]) {
+        alert(replacements[typed]);
+      }
+    });
+  </script>
+</body>
+</html>
